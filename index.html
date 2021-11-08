@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <title>Document</title>
+    <style scoped>
+    * { 
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width:100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    header{
+        background-color: #fff;
+        display: flex;
+        width: 100vw;
+        height: 9vh;
+        box-shadow: 0px 0px 16px 2px rgba(102, 102, 102, 0.1), 0px 0px 5px 1px rgba(102, 102, 102, 0.15); 
+        overflow: hidden;
+    }
+    .page-header{ 
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    .page-header__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 24px;
+        color: #FFB000;
+    }
+    .logo__title:hover {
+        font-size: 1.5rem;
+        transition: 0.2s;
+    }
+    nav{ 
+        display: flex;
+        flex-direction: row;
+        margin: 0 24px 0 auto;
+    }
+    nav .nav-options__button * {
+        width: 100%;
+        height: 100%;
+        /* alinha o texto das opções no centro */
+        margin: 0 8px 0 0;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .nav-options__button:hover {
+        background-color: #ddd;
+        color: rgb(223, 103, 56);
+    }
+    footer{ 
+        border-top: 1px solid #ccc;
+        background-color: #fff;
+        padding: 24px;
+    }
+    @media (max-width: 700px) {
+        /*
+        itens do menu em coluna
+        AdoteAqui Suma
+        */
+        header{
+            top:0;
+            left: 0;
+            position: absolute;
+            flex-direction: column;
+            min-width: 80px;
+            width: 25vw;
+            height: 100vh;
+        }
+        header > * {
+            width: 100%;
+        }
+        nav {
+            margin-top: 24px;
+            flex-direction: column;
+
+        }
+
+        .page-header__logo{
+            display: none
+        }
+        .page-header__nav-options{
+            margin: 0;
+            width: 100%;
+            margin-top: 10px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-options__button{
+            /*sobrescreve margin global*/
+            margin: 8px 0 0 0;
+            padding: 8px 16px;
+        }
+        footer{
+            margin: auto 0 0 0;
+            padding-left: 30vw; 
+            align-self: flex-end;
+        }
+
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="page-header">
+            <div class="page-header__logo">
+                <h3 class="logo__title">
+                    AdoteAqui!
+                </h3>
+            </div>
+            <nav class="page-header__nav-options">
+               <div class="nav-options__button">
+                   <span>Home</span>
+               </div> 
+               <div class="nav-options__button">
+                   <span>
+                       Sobre
+                   </span>
+               </div> 
+               <div class="nav-options__button">
+                   <span>
+                       Contato
+                   </span>
+               </div> 
+            </nav> 
+        </div>
+    </header>
+    <main>
+        <!-- populate  :D -->
+    </main>
+    <footer>
+        <div> &copy; Copyright - Todos os direitos reservados. </div>
+        <div></div>
+    </footer>
+</body>
+</html>
